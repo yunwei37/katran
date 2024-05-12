@@ -41,7 +41,8 @@ void checkBpfProgType(::bpf_object* obj, ::bpf_prog_type type) {
 }
 
 std::string libBpfErrMsg(int err) {
-  std::array<char, 128> buf{};
+  std::vector<char> buf{};
+  buf.resize(128);
   libbpf_strerror(err, buf.data(), buf.size());
   return std::string(buf.begin(), buf.end());
 }

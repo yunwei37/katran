@@ -619,11 +619,11 @@ test_katran() {
     popd
 }
 
-get_dev_tools
-get_required_libs
+# get_dev_tools
+# get_required_libs
 get_libevent
 get_gflags
-get_folly
+# get_folly
 get_clang
 get_gtest
 get_libbpf
